@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-content: center;
+            background-image: url('SAO.webp');
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            background-size: cover;
+        }
+
+        /* .box{
+            height: 100vh;
+            width: 100vw;
+            background-color: aquamarine;
+            text-align: center;
+        } */
+        h1{
+            /* margin-top: 12rem; */
+            color: #f796fb;
+            font-size: 4rem;
+            
+        }
+        h1::after{
+            border-right: 2px solid;
+            content: ' ';
+            position: relative;
+            left: 10px;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+        <H1 id="text"> </H1><span id="blink"> </span>
+
+    </div>
+
+    <script>
+        let tex ='Welcome to Sword Art Online';
+        let Text = document.getElementById('text');
+
+        var i=0;
+        let interval = setInterval(recall, 150);
+
+        function recall(){
+            
+            Text.innerHTML=tex.slice(0, i++);1
+            if (i>tex.length){
+                // clearInterval(interval);
+                i=0;
+            }
+        }
+        
+
+
+        // let zed = document.getElementById('blink');
+        
+        // setInterval(()=>{
+        //     if(zed.innerText == '|'){
+        //         zed.innerText = ' ';
+        //     }
+        //     else{
+        //         zed.innerText = '|';
+        //     }
+        // }, 500);
+
+        // // text printing
+        // let arrey = ['welcome', 'to', 'Sword', 'Art','Online'];
+        // let Text = document.getElementById('text');
+        
+        // let i=0;
+        // let j=0;
+        // // let Interval = setInterval(()=>{
+             
+        // //     if(i<arrey.length){
+        // //         Text.innerText += ' ' +arrey[i];
+        // //         i++;
+        // //     }
+        // //        else{
+        // //         clearInterval(Interval);
+        // //        }  
+        // // }, 500);
+
+        // let interval = setInterval(() => {
+        //         if (i < arrey.length) {
+        //             if (j < arrey[i].length) {
+        //                 Text.innerText +=" "+ arrey[i][j];
+        //                 j++;
+        //             }
+        //             else {
+        //                 if (j === arrey[i].length) {
+        //                     Text.innerText += ' ';
+        //                 }
+        //                 j = 0;
+        //             i++;
+                        
+        //             }
+                    
+        //         }
+        //         else {
+        //             clearInterval(interval);
+        //         }
+
+        //     }, 500);
+        
+    </script>
+</body>
+</html>
